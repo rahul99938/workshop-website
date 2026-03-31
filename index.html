@@ -1,48 +1,98 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Workshop Marketing & Growth Service</title><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"><style>
+<title>Workshop Marketing & Growth Service</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif;}
 body{background:#0d0d0d;color:#fff;scroll-behavior:smooth;}
 
 /* HEADER */
 header{
-position:sticky;top:0;background:#000;
-padding:15px 20px;display:flex;
-justify-content:space-between;align-items:center;z-index:999;
+position:sticky;top:0;
+background:#000;
+padding:15px 20px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:999;
+border-bottom:1px solid #222;
 }
 header h2{color:#facc15;}
-nav a{color:#fff;margin-left:15px;text-decoration:none;}
-nav a:hover{color:#facc15;cursor:pointer;}
+nav a{color:#fff;margin-left:15px;text-decoration:none;font-size:14px;}
+nav a:hover{color:#facc15;}
 
 /* HERO */
 .hero{
-height:100vh;display:flex;align-items:center;justify-content:center;
-text-align:center;background:linear-gradient(135deg,#000,#111,#222);
+min-height:100vh;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
 padding:20px;
+background:radial-gradient(circle,#111,#000);
 }
-.hero h1{font-size:38px;margin-bottom:15px;}
-.hero p{color:#ccc;margin-bottom:20px;}
-
-.btn{padding:10px 20px;border:none;border-radius:5px;cursor:pointer;margin:5px;}
+.hero h1{font-size:40px;margin-bottom:15px;}
+.hero p{color:#ccc;margin-bottom:20px;font-size:16px;}
+.btn{
+padding:10px 20px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+margin:5px;
+transition:.3s;
+}
 .btn-yellow{background:#facc15;color:#000;}
+.btn-yellow:hover{transform:scale(1.05);}
 .btn-outline{border:1px solid #facc15;background:transparent;color:#facc15;}
 
 /* SECTIONS */
-section{padding:60px 20px;max-width:1100px;margin:auto;}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;}
-.card{background:#111;padding:20px;border-radius:10px;transition:.3s;}
+section{padding:70px 20px;max-width:1100px;margin:auto;}
+h2{text-align:center;margin-bottom:30px;color:#facc15;}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+.card{
+background:#111;
+padding:20px;
+border-radius:10px;
+transition:.3s;
+}
 .card:hover{transform:translateY(-5px);background:#1a1a1a;}
 
 /* PRICING */
-.pricing{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;}
-.price-card{background:#111;padding:25px;text-align:center;border-radius:10px;}
-.price{color:#facc15;font-size:28px;margin:10px 0;}
+.pricing{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:15px;
+}
+.price-card{
+background:#111;
+padding:25px;
+border-radius:10px;
+text-align:center;
+transition:.3s;
+}
+.price-card:hover{transform:scale(1.05);}
+.price{color:#facc15;font-size:30px;margin:10px 0;}
 .popular{border:2px solid #facc15;}
 
 /* FORM */
-input,select{width:100%;padding:10px;margin:8px 0;border:none;border-radius:5px;}
+input,select{
+width:100%;
+padding:10px;
+margin:8px 0;
+border:none;
+border-radius:5px;
+}
 .success{display:none;color:#facc15;margin-top:10px;}
 
 /* ADMIN PANEL */
@@ -52,21 +102,31 @@ position:fixed;
 top:0;left:0;
 width:100%;height:100%;
 background:#000;
+z-index:9999;
 padding:20px;
 overflow:auto;
-z-index:9999;
 }
 .admin-box{
-background:#111;padding:20px;border-radius:10px;
-max-width:800px;margin:auto;
+background:#111;
+padding:20px;
+border-radius:10px;
+max-width:800px;
+margin:auto;
 }
+.close{float:right;color:red;cursor:pointer;font-size:20px;}
 table{width:100%;margin-top:15px;border-collapse:collapse;}
-table th,table td{border:1px solid #333;padding:8px;text-align:left;}
-.close-btn{float:right;cursor:pointer;color:red;font-size:20px;}
+th,td{border:1px solid #333;padding:8px;font-size:14px;}
 
 .fade{opacity:0;transform:translateY(20px);transition:1s;}
 .fade.show{opacity:1;transform:translateY(0);}
-</style></head><body><header>
+
+footer{text-align:center;padding:20px;color:#777;}
+</style>
+</head>
+
+<body>
+
+<header>
 <h2>Workshop Growth</h2>
 <nav>
 <a href="#services">Services</a>
@@ -74,122 +134,241 @@ table th,table td{border:1px solid #333;padding:8px;text-align:left;}
 <a href="#order">Order</a>
 <a onclick="openAdmin()">Admin</a>
 </nav>
-</header><!-- HERO --><section class="hero">
+</header>
+
+<!-- HERO -->
+<section class="hero fade">
 <div>
 <h1>30 diner moddhe apnar workshop e customer baran!</h1>
-<p>Ami apnar workshop er jonno full marketing system toiri kori.</p><a href="tel:+8801845130981"><button class="btn btn-yellow">Call Now</button></a> <a href="https://wa.me/8801845130981"><button class="btn btn-outline">WhatsApp</button></a>
+<p>Ami apnar workshop er jonno full marketing & customer system toiri kore dei.</p>
 
+<a href="tel:+8801845130981"><button class="btn btn-yellow">Call Now</button></a>
+<a href="https://wa.me/8801845130981"><button class="btn btn-outline">WhatsApp</button></a>
 </div>
-</section><!-- SERVICES --><section id="services">
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="fade">
 <h2>Services</h2>
 <div class="grid">
-<div class="card">Facebook Marketing</div>
-<div class="card">Google Map SEO</div>
-<div class="card">Ads Management</div>
-<div class="card">Content Creation</div>
+
+<div class="card"><i class="fa-brands fa-facebook"></i><br>Facebook Marketing</div>
+<div class="card"><i class="fa-solid fa-location-dot"></i><br>Google Map SEO</div>
+<div class="card"><i class="fa-solid fa-bullhorn"></i><br>Ads Management</div>
+<div class="card"><i class="fa-solid fa-camera"></i><br>Content Creation</div>
+
 </div>
-</section><!-- PRICING --><section id="pricing">
+</section>
+
+<!-- CORPORATE -->
+<section class="fade">
+<h2>Corporate Clients</h2>
+<div class="grid">
+<div class="card">AMC Contracts</div>
+<div class="card">Corporate Pitch</div>
+<div class="card">Proposal Design</div>
+<div class="card">Presentation Support</div>
+</div>
+</section>
+
+<!-- TRANSPORT -->
+<section class="fade">
+<h2>Transport Solutions</h2>
+<div class="grid">
+<div class="card">Fleet Marketing</div>
+<div class="card">Maintenance Plan</div>
+<div class="card">Transport Ads</div>
+<div class="card">Business Growth Strategy</div>
+</div>
+</section>
+
+<!-- RENT A CAR -->
+<section class="fade">
+<h2>Rent A Car System</h2>
+<div class="grid">
+<div class="card">Car Rental Marketing</div>
+<div class="card">Customer Booking System</div>
+<div class="card">Corporate Deals</div>
+<div class="card">Lead Generation</div>
+</div>
+</section>
+
+<!-- REPEAT SYSTEM -->
+<section class="fade">
+<h2>Customer Repeat System</h2>
+<div class="card">
+<p>✔ Customer Database</p>
+<p>✔ Follow-up System</p>
+<p>✔ Google Review Boost</p>
+<br>
+<p style="color:#facc15">Example Message:</p>
+<p>“Assalamu Alaikum, apnar gari service kemon holo?”</p>
+<p>“Apnar service bill: 3500 BDT. Dhonnobad.”</p>
+</div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="fade">
 <h2>Pricing</h2>
-<div class="pricing"><div class="price-card">
+
+<div class="pricing">
+
+<div class="price-card">
 <h3>Starter</h3>
 <div class="price">1500 BDT</div>
 <button class="btn btn-yellow" onclick="selectPlan('Starter Plan')">Order Now</button>
-</div><div class="price-card popular">
+</div>
+
+<div class="price-card popular">
 <h3>Growth</h3>
 <div class="price">4000 BDT</div>
 <button class="btn btn-yellow" onclick="selectPlan('Growth Plan')">Order Now</button>
-</div><div class="price-card">
+</div>
+
+<div class="price-card">
 <h3>Pro</h3>
 <div class="price">7000 BDT</div>
 <button class="btn btn-yellow" onclick="selectPlan('Pro Plan')">Order Now</button>
-</div></div>
-</section><!-- ORDER --><section id="order">
-<h2>Place Order</h2><form id="orderForm">
-<input type="text" id="name" placeholder="Name" required>
-<input type="text" id="phone" placeholder="Phone" required>
-<input type="text" id="address" placeholder="Address" required><select id="package">
+</div>
+
+</div>
+</section>
+
+<!-- OFFER -->
+<section class="fade">
+<h2>Special Offer</h2>
+<div class="card">
+✔ Custom Growth Plan<br>
+✔ Corporate Pitch Ready<br>
+✔ Work starts within 3 days<br>
+✔ Weekly Report<br>
+✔ No hidden charges
+</div>
+</section>
+
+<!-- ABOUT -->
+<section class="fade">
+<h2>About Us</h2>
+<div class="card">
+We help workshop & automotive businesses grow using digital marketing, customer system, and smart business strategy.
+</div>
+</section>
+
+<!-- ORDER -->
+<section id="order" class="fade">
+<h2>Place Order</h2>
+
+<form id="orderForm">
+<input type="text" id="name" placeholder="Full Name" required>
+<input type="text" id="phone" placeholder="Phone Number" required>
+<input type="text" id="address" placeholder="Address" required>
+
+<select id="package">
 <option>Starter Plan</option>
 <option>Growth Plan</option>
 <option>Pro Plan</option>
-</select><button class="btn btn-yellow">Confirm Order</button>
+</select>
 
-</form><p class="success" id="successMsg">Order Saved Successfully!</p>
-</section><!-- ADMIN PANEL --><div id="adminPanel">
+<button class="btn btn-yellow">Confirm Order</button>
+</form>
+
+<p class="success" id="successMsg">Thank you! We will contact you soon.</p>
+</section>
+
+<!-- CONTACT -->
+<section class="fade">
+<h2>Contact</h2>
+<div class="card">
+<p>Name: Yasin Ahmed</p>
+<p>Phone: +8801845130981</p>
+<p>Location: Chittagong</p>
+<br>
+<a href="https://wa.me/8801845130981"><button class="btn btn-yellow">WhatsApp Now</button></a>
+</div>
+</section>
+
+<!-- ADMIN -->
+<div id="adminPanel">
 <div class="admin-box">
-<span class="close-btn" onclick="closeAdmin()">X</span><h2>Admin Panel</h2><div id="loginBox">
-<input type="password" id="adminPass" placeholder="Enter Password">
-<button class="btn btn-yellow" onclick="loginAdmin()">Login</button>
-</div><div id="dashboard" style="display:none;">
-<h3>Orders List</h3>
+<span class="close" onclick="closeAdmin()">X</span>
+
+<h2>Admin Panel</h2>
+
+<input type="password" id="pass" placeholder="Enter Password">
+<button class="btn btn-yellow" onclick="login()">Login</button>
+
+<div id="dash" style="display:none;">
 <table>
 <thead>
-<tr>
-<th>Name</th>
-<th>Phone</th>
-<th>Address</th>
-<th>Package</th>
-</tr>
+<tr><th>Name</th><th>Phone</th><th>Address</th><th>Package</th></tr>
 </thead>
-<tbody id="orderTable"></tbody>
-</table><br>
-<button class="btn btn-yellow" onclick="clearOrders()">Delete All Orders</button>
-</div></div>
-</div><script>
+<tbody id="orders"></tbody>
+</table>
 
-let selectedPlan = "Starter Plan";
+<br>
+<button class="btn btn-yellow" onclick="clearOrders()">Delete All</button>
+</div>
 
+</div>
+</div>
+
+<footer>
+© 2026 Workshop Marketing Service
+</footer>
+
+<script>
+
+let selectedPlan="Starter Plan";
+
+/* PLAN */
 function selectPlan(plan){
-selectedPlan = plan;
-document.getElementById("package").value = plan;
-document.getElementById("order").scrollIntoView();
+selectedPlan=plan;
+document.getElementById("package").value=plan;
+document.getElementById("order").scrollIntoView({behavior:"smooth"});
 }
 
+/* ORDER */
 document.getElementById("orderForm").addEventListener("submit",function(e){
 e.preventDefault();
 
-let name = document.getElementById("name").value;
-let phone = document.getElementById("phone").value;
-let address = document.getElementById("address").value;
-let pkg = document.getElementById("package").value;
+let name=document.getElementById("name").value;
+let phone=document.getElementById("phone").value;
+let address=document.getElementById("address").value;
+let pkg=document.getElementById("package").value;
 
-let orders = JSON.parse(localStorage.getItem("orders")) || [];
-
+let orders=JSON.parse(localStorage.getItem("orders"))||[];
 orders.push({name,phone,address,pkg});
 localStorage.setItem("orders",JSON.stringify(orders));
 
 document.getElementById("successMsg").style.display="block";
 
-let msg = `Hello, I want ${pkg}%0AName:${name}%0APhone:${phone}%0AAddress:${address}`;
+let msg=`Hello, I want ${pkg}%0AName:${name}%0APhone:${phone}%0AAddress:${address}`;
 
 setTimeout(()=>{
 window.location.href=`https://wa.me/8801845130981?text=${msg}`;
 },1200);
 });
 
+/* ADMIN */
 function openAdmin(){
 document.getElementById("adminPanel").style.display="block";
 }
-
 function closeAdmin(){
 document.getElementById("adminPanel").style.display="none";
 }
-
-function loginAdmin(){
-let pass = document.getElementById("adminPass").value;
+function login(){
+let pass=document.getElementById("pass").value;
 if(pass==="1234"){
-document.getElementById("loginBox").style.display="none";
-document.getElementById("dashboard").style.display="block";
-loadOrders();
+document.getElementById("dash").style.display="block";
+load();
 }else{
-alert("Wrong Password!");
+alert("Wrong Password");
 }
 }
-
-function loadOrders(){
-let orders = JSON.parse(localStorage.getItem("orders")) || [];
-let table = document.getElementById("orderTable");
+function load(){
+let orders=JSON.parse(localStorage.getItem("orders"))||[];
+let table=document.getElementById("orders");
 table.innerHTML="";
-
 orders.forEach(o=>{
 table.innerHTML+=`
 <tr>
@@ -197,15 +376,22 @@ table.innerHTML+=`
 <td>${o.phone}</td>
 <td>${o.address}</td>
 <td>${o.pkg}</td>
-</tr>
-`;
+</tr>`;
 });
 }
-
 function clearOrders(){
 localStorage.removeItem("orders");
-loadOrders();
+load();
 }
 
-</script></body>
+/* SCROLL ANIMATION */
+window.addEventListener("scroll",()=>{
+document.querySelectorAll(".fade").forEach(el=>{
+let pos=el.getBoundingClientRect().top;
+if(pos<600){el.classList.add("show");}
+});
+});
+</script>
+
+</body>
 </html>
